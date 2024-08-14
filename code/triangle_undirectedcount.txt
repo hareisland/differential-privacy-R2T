@@ -1,0 +1,1 @@
+select count(*),e1.from_id, e2.from_id,e2.to_id from edge e1 join edge e2 on e1.to_id = e2.from_id join edge e3 on e2.to_id = e3.to_id where e1.from_id = e3.from_id group by e1.from_id, e2.from_id,e2.to_id ;
